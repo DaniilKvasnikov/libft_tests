@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   tests.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhaenys <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/20 16:54:38 by rrhaenys          #+#    #+#             */
-/*   Updated: 2018/11/20 16:54:40 by rrhaenys         ###   ########.fr       */
+/*   Created: 2018/11/21 16:24:42 by rrhaenys          #+#    #+#             */
+/*   Updated: 2018/11/21 16:24:43 by rrhaenys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#ifndef TESTS_H
+# define TESTS_H
 
-int	main(void)
-{
-//	ft_memset_test();
-//	ft_bzero_test();
-//	ft_memcpy_test();
-	ft_memccpy_test();
-	return (0);
-}
+# include "libft.h"
+# include <string.h>
+
+int		ft_equal_a(char *s1, char *s2);
+void	ft_memset_test(void);
+void	ft_bzero_test(void);
+void	ft_memcpy_test(void);
+void	ft_memccpy_test(void);
+
+#endif
