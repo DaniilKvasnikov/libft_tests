@@ -14,9 +14,9 @@
 
 int	main(void)
 {
-//	ft_memset_test();
-//	ft_bzero_test();
-//	ft_memcpy_test();
+	ft_memset_test();
+	ft_bzero_test();
+	ft_memcpy_test();
 	ft_memccpy_test();
 	return (0);
 }

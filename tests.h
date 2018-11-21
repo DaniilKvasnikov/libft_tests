@@ -13,8 +13,10 @@
 #ifndef TESTS_H
 # define TESTS_H
 
-# include "libft.h"
+# include "../libft.h"
 # include <string.h>
+
+#define PRINT_LOG 0
 
 int		ft_equal_a(char *s1, char *s2);
 void	ft_memset_test(void);

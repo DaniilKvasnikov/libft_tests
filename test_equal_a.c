@@ -12,8 +12,6 @@
 
 #include "tests.h"
 
-#define PRINT_LOG 1
-
 int	ft_equal_a(char *s1, char *s2)
 {
 	int		result;
