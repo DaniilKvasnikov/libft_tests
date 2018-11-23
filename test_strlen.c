@@ -1,43 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_strlen.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhaenys <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/20 16:54:38 by rrhaenys          #+#    #+#             */
-/*   Updated: 2018/11/20 16:54:40 by rrhaenys         ###   ########.fr       */
+/*   Created: 2018/11/21 23:21:05 by rrhaenys          #+#    #+#             */
+/*   Updated: 2018/11/21 23:21:07 by rrhaenys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
-#include <stdio.h>
 
-#include <locale.h>
-
-int	main(void)
+static int	strlen_test(char *str)
 {
-	/*
-	ft_memset_test();
-	ft_bzero_test();
-	ft_memcpy_test();
-	ft_memccpy_test();
-	ft_memmove_test();
-	ft_memchr_test();
-	ft_memcmp_test();
-	ft_strlen_test();
-	ft_strdup_test();
-	ft_strcpy_test();
-	ft_strncpy_test();
-	ft_strcat_test();
-	ft_strncat_test();
-	ft_putchar(c);
-	*/
-	int n = 0x80;
-	while (n < 0xff)
-	{
-		ft_putchar(n++);
-		ft_puts("");
-	}
-	return (0);
+	int	origin;
+	int	test;
+	int	result;
+
+	origin = strlen(str);
+	test = ft_strlen(str);
+	result = ft_equal_i(origin, test);
+	return (result != 0);
+}
+
+void		ft_strlen_test(void)
+{
+	if (strlen_test("123") == 0 &&
+		strlen_test("") == 0 &&
+		strlen_test("asd\t\0 asd") == 0)
+		ft_puts("Norm:	ft_strlen");
+	else
+		ft_puts("Error:	ft_strlen");
 }

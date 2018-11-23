@@ -39,6 +39,8 @@ static int	memset_test(char *src, int c, int len, int delta)
 void		ft_memset_test(void)
 {
 	if (memset_test(NULL, '\0', 0, 0) == 0 &&
+//		memset_test(NULL, '\0', -1, 0) == 0 && //Not compile
+//		memset_test("ac", '\0', -1, 0) == 0 && //Not compile
 		memset_test("a\0c", '2', 1, 1) == 0 &&
 		memset_test("b\0aaaa", '2', 4, 0) == 0 &&
 		memset_test("c123456789", '\0', 0, 0) == 0 &&

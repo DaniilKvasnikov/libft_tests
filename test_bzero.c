@@ -39,14 +39,16 @@ static int	bzero_test(char *src, int len, int delta)
 void		ft_bzero_test(void)
 {
 	if (bzero_test(NULL, 0, 0) == 0 &&
+//		bzero_test(NULL, -1, 0) == 0 && //Not work
+//		bzero_test("a\0c", -1, 0) == 0 && //Not work
 		bzero_test("a\0c", 1, 1) == 0 &&
-		bzero_test("b\0aaaa", 4, 0) == 0 &&
-		bzero_test("c123456789", 0, 0) == 0 &&
-		bzero_test("d123456789", 10, 0) == 0 &&
-		bzero_test("e123456789", 5, 0) == 0 &&
-		bzero_test("f123456789", 0, 0) == 0 &&
+		bzero_test("b\0aaaa", 4, 1) == 0 &&
+		bzero_test("c123456789", 0, 1) == 0 &&
+		bzero_test("d123456789", 9, 1) == 0 &&
+		bzero_test("e123456789", 5, 1) == 0 &&
+		bzero_test("f123456789", 0, 1) == 0 &&
 		bzero_test("", 0, 0) == 0 &&
-		bzero_test("g23", 1, 0) == 0)
+		bzero_test("g23", 1, 1) == 0)
 		ft_puts("Norm:	ft_bzero");
 	else
 		ft_puts("Error:	ft_bzero");

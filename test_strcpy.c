@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_memcpy.c                                      :+:      :+:    :+:   */
+/*   test_strcpy.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhaenys <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/21 17:13:05 by rrhaenys          #+#    #+#             */
-/*   Updated: 2018/11/21 17:13:07 by rrhaenys         ###   ########.fr       */
+/*   Created: 2018/11/21 23:43:27 by rrhaenys          #+#    #+#             */
+/*   Updated: 2018/11/21 23:43:29 by rrhaenys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
 
-static int	memcpy_test(void *dst, void *src, size_t n, int delta)
+static int	strcpy_test(void *dst, void *src, int delta)
 {
 	char	*origin;
 	char	*test;
@@ -22,15 +22,15 @@ static int	memcpy_test(void *dst, void *src, size_t n, int delta)
 	{
 		origin = ft_strdup(dst);
 		test = ft_strdup(dst);
-		memcpy(origin + delta, src, n);
-		ft_memcpy(test + delta, src, n);
+		strcpy(origin + delta, src);
+		ft_strcpy(test + delta, src);
 	}
 	else
 	{
 		origin = dst;
 		test = dst;
-		memcpy(origin, src, n);
-		ft_memcpy(test, src, n);
+		strcpy(origin, src);
+		ft_strcpy(test, src);
 	}
 	result = ft_equal_a(origin, test);
 	free(origin);
@@ -38,18 +38,16 @@ static int	memcpy_test(void *dst, void *src, size_t n, int delta)
 	return (result != 0);
 }
 
-void		ft_memcpy_test(void)
+void		ft_strcpy_test(void)
 {
-	if (memcpy_test("123", "", 0, 0) == 0 &&
-		memcpy_test("123", "", 1, 0) == 0 &&
-		memcpy_test("123", "456", 1, 0) == 0 &&
-//		memcpy_test("123", "456", -1, 0) == 0 &&
-		memcpy_test(NULL, NULL, -1, 0) == 0 &&
-		memcpy_test("123", "456", 1, 1) == 0 &&
-		memcpy_test("123", "456", 3, 1) == 0 &&
-		memcpy_test("123", "456", 3, 3) == 0 &&
-		memcpy_test(NULL, NULL, 1, 1) == 0)
-		ft_puts("Norm:	ft_memcpy");
+	if (strcpy_test("123", "456", 0) == 0 &&
+		strcpy_test("123", "", 0) == 0 &&
+//		strcpy_test(NULL, NULL, 0) == 0 && //Not work
+//		strcpy_test(NULL, NULL, 1) == 0 && //Not work
+		strcpy_test("123", "456", 1) == 0 &&
+		strcpy_test("123", "456", 1) == 0 &&
+		strcpy_test("123", "456", 3) == 0)
+		ft_puts("Norm:	ft_strcpy");
 	else
-		ft_puts("Error:	ft_memcpy");
+		ft_puts("Error:	ft_strcpy");
 }

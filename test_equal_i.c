@@ -1,43 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   test_equal_i.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rrhaenys <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/20 16:54:38 by rrhaenys          #+#    #+#             */
-/*   Updated: 2018/11/20 16:54:40 by rrhaenys         ###   ########.fr       */
+/*   Created: 2018/11/21 21:36:12 by rrhaenys          #+#    #+#             */
+/*   Updated: 2018/11/21 21:36:14 by rrhaenys         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "tests.h"
-#include <stdio.h>
 
-#include <locale.h>
-
-int	main(void)
+int	ft_equal_i(int p1, int p2)
 {
-	/*
-	ft_memset_test();
-	ft_bzero_test();
-	ft_memcpy_test();
-	ft_memccpy_test();
-	ft_memmove_test();
-	ft_memchr_test();
-	ft_memcmp_test();
-	ft_strlen_test();
-	ft_strdup_test();
-	ft_strcpy_test();
-	ft_strncpy_test();
-	ft_strcat_test();
-	ft_strncat_test();
-	ft_putchar(c);
-	*/
-	int n = 0x80;
-	while (n < 0xff)
+	int		result;
+
+	result = (p1 != p2);
+	if (PRINT_LOG == 1)
 	{
-		ft_putchar(n++);
+		(result == 0) ? ft_puts("Norm:") : ft_puts("Error:");
+		ft_putstr("	origin: ");
+		ft_putnbr(p1);
+		ft_puts("");
+		ft_putstr("	  test: ");
+		ft_putnbr(p2);
 		ft_puts("");
 	}
-	return (0);
+	return (result != 0);
 }
