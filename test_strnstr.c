@@ -26,7 +26,8 @@ static int	strnstr_test(char *s1, char *s2, int n)
 
 void		ft_strnstr_test(void)
 {
-	if (strnstr_test("12345", "123", 3) == 0)
+	if (strnstr_test("12345", "123", 2) == 0 &&
+		strnstr_test("12345", "23", 5) == 0)
 		ft_puts("Norm:	ft_strnstr");
 	else
 		ft_puts("Error:	ft_strnstr");

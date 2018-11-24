@@ -22,7 +22,9 @@ static int	toupper_test(char s1)
 
 void		ft_toupper_test(void)
 {
-	if (toupper_test('1') == 0)
+	if (toupper_test('1') == 0 &&
+		toupper_test('A') == 0 &&
+		toupper_test('a') == 0)
 		ft_puts("Norm:	ft_toupper");
 	else
 		ft_puts("Error:	ft_toupper");

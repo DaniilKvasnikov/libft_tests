@@ -26,7 +26,8 @@ static int	strstr_test(char *s1, char *s2)
 
 void		ft_strstr_test(void)
 {
-	if (strstr_test("12345", "123") == 0)
+	if (strstr_test("123", "2") == 0 &&
+		strstr_test("123", "4") == 0)
 		ft_puts("Norm:	ft_strstr");
 	else
 		ft_puts("Error:	ft_strstr");

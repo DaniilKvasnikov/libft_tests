@@ -22,7 +22,9 @@ static int	isascii_test(char s1)
 
 void		ft_isascii_test(void)
 {
-	if (isascii_test('1') == 0)
+	if (isascii_test('0') == 0 &&
+		isascii_test('a') == 0 &&
+		isascii_test(' ') == 0)
 		ft_puts("Norm:	ft_isascii");
 	else
 		ft_puts("Error:	ft_isascii");

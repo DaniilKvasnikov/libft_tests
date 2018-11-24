@@ -22,7 +22,9 @@ static int	strcmp_test(char *s1, char *s2)
 
 void		ft_strcmp_test(void)
 {
-	if (strcmp_test("1234", "12345") == 0)
+	if (strcmp_test("1234", "12345") == 0 &&
+		strcmp_test("1234", "1234") == 0 &&
+		strcmp_test("", "") == 0)
 		ft_puts("Norm:	ft_strcmp");
 	else
 		ft_puts("Error:	ft_strcmp");

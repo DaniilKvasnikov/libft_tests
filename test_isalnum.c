@@ -22,7 +22,9 @@ static int	isalnum_test(char s1)
 
 void		ft_isalnum_test(void)
 {
-	if (isalnum_test('1') == 0)
+	if (isalnum_test('0') == 0 &&
+		isalnum_test('a') == 0 &&
+		isalnum_test(' ') == 0)
 		ft_puts("Norm:	ft_isalnum");
 	else
 		ft_puts("Error:	ft_isalnum");

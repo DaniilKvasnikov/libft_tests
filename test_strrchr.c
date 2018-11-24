@@ -26,7 +26,8 @@ static int	strrchr_test(char *s1, int s2)
 
 void		ft_strrchr_test(void)
 {
-	if (strrchr_test("123", '2') == 0)
+	if (strrchr_test("123", '2') == 0 &&
+		strrchr_test("123", '4') == 0)
 		ft_puts("Norm:	ft_strrchr");
 	else
 		ft_puts("Error:	ft_strrchr");

@@ -22,7 +22,9 @@ static int	isdigit_test(char s1)
 
 void		ft_isdigit_test(void)
 {
-	if (isdigit_test('1') == 0)
+	if (isdigit_test('0') == 0 &&
+		isdigit_test('a') == 0 &&
+		isdigit_test(' ') == 0)
 		ft_puts("Norm:	ft_isdigit");
 	else
 		ft_puts("Error:	ft_isdigit");

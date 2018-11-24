@@ -34,7 +34,8 @@ static int	strlcat_test(char *s1, char *s2, int n)
 
 void		ft_strlcat_test(void)
 {
-	if (strlcat_test("123", "123", 1) == 0)
+	if (strlcat_test("123", "123", 1) == 0 &&
+		strlcat_test("123", "", 1) == 0)
 		ft_puts("Norm:	ft_strlcat");
 	else
 		ft_puts("Error:	ft_strlcat");
