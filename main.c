@@ -33,6 +33,16 @@ int	main(void)
 	ft_strrchr_test();
 	ft_strstr_test();
 	ft_strnstr_test();
+	ft_strcmp_test();
+	ft_strncmp_test();
+	ft_atoi_test();
+	ft_isalpha_test();
+	ft_isdigit_test();
+	ft_isalnum_test();
+	ft_isascii_test();
+	ft_isprint_test();
+	ft_toupper_test();
+	ft_tolower_test();
 	/*
 	int n = 0x80;
 	while (n < 0xff)

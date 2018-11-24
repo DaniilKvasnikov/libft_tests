@@ -10,4 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "tests.h"
 
+static int	isascii_test(char s1)
+{
+	int		result;
+
+	result = ft_equal_i(isascii(s1), ft_isascii(s1));
+	return (result != 0);
+}
+
+void		ft_isascii_test(void)
+{
+	if (isascii_test('1') == 0)
+		ft_puts("Norm:	ft_isascii");
+	else
+		ft_puts("Error:	ft_isascii");
+}

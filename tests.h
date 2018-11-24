@@ -15,6 +15,7 @@
 
 # include "../libft/libft.h"
 # include <string.h>
+# include <ctype.h>
 
 # define PRINT_LOG 1
 
@@ -38,5 +39,15 @@ void	ft_strchr_test(void);
 void	ft_strrchr_test(void);
 void	ft_strstr_test(void);
 void	ft_strnstr_test(void);
+void	ft_strcmp_test(void);
+void	ft_strncmp_test(void);
+void	ft_atoi_test(void);
+void	ft_isalpha_test(void);
+void	ft_isdigit_test(void);
+void	ft_isalnum_test(void);
+void	ft_isascii_test(void);
+void	ft_isprint_test(void);
+void	ft_toupper_test(void);
+void	ft_tolower_test(void);
 
 #endif

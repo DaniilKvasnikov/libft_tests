@@ -10,4 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "tests.h"
 
+static int	isalnum_test(char s1)
+{
+	int		result;
+
+	result = ft_equal_i(isalnum(s1), ft_isalnum(s1));
+	return (result != 0);
+}
+
+void		ft_isalnum_test(void)
+{
+	if (isalnum_test('1') == 0)
+		ft_puts("Norm:	ft_isalnum");
+	else
+		ft_puts("Error:	ft_isalnum");
+}

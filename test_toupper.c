@@ -10,4 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "tests.h"
 
+static int	toupper_test(char s1)
+{
+	int		result;
+
+	result = ft_equal_i(toupper(s1), ft_toupper(s1));
+	return (result != 0);
+}
+
+void		ft_toupper_test(void)
+{
+	if (toupper_test('1') == 0)
+		ft_puts("Norm:	ft_toupper");
+	else
+		ft_puts("Error:	ft_toupper");
+}
