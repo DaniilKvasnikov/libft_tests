@@ -16,7 +16,7 @@
 # include "../libft/libft.h"
 # include <string.h>
 
-# define PRINT_LOG 0
+# define PRINT_LOG 1
 
 int		ft_equal_a(char *s1, char *s2);
 int		ft_equal_i(int p1, int p2);
@@ -33,5 +33,10 @@ void	ft_strcpy_test(void);
 void	ft_strncpy_test(void);
 void	ft_strcat_test(void);
 void	ft_strncat_test(void);
+void	ft_strlcat_test(void);
+void	ft_strchr_test(void);
+void	ft_strrchr_test(void);
+void	ft_strstr_test(void);
+void	ft_strnstr_test(void);
 
 #endif

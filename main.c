@@ -13,11 +13,8 @@
 #include "tests.h"
 #include <stdio.h>
 
-#include <locale.h>
-
 int	main(void)
 {
-	/*
 	ft_memset_test();
 	ft_bzero_test();
 	ft_memcpy_test();
@@ -31,13 +28,18 @@ int	main(void)
 	ft_strncpy_test();
 	ft_strcat_test();
 	ft_strncat_test();
-	ft_putchar(c);
-	*/
+	ft_strlcat_test();
+	ft_strchr_test();
+	ft_strrchr_test();
+	ft_strstr_test();
+	ft_strnstr_test();
+	/*
 	int n = 0x80;
 	while (n < 0xff)
 	{
 		ft_putchar(n++);
 		ft_puts("");
 	}
+	*/
 	return (0);
 }

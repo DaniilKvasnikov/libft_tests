@@ -11,24 +11,27 @@
 # **************************************************************************** #
 
 NAME = ../libft/libft.a
-COMMAND = gcc
-FLAGS = -Wall -Wextra -Werror -c
+COMMAND = clang
+FLAGS = -Wall -Wextra -Werror -c -g
 SRC_TEST = $(shell ls | grep -E "test_.+\.c")
 OBJ_TEST = $(SRC_TEST:.c=.o)
 TESTS = tests.a
-FILE_TEST = test
+FILE_TEST = test.out
+MAIN = main.o
 
-all: $(TESTS)
-	$(COMMAND) $(FLAGS) -c main.c -o main.o
-	$(COMMAND) -Wall -Wextra -Werror -o $(FILE_TEST) main.o $(NAME) $(TESTS)
-	./$(FILE_TEST)
-	
+all: lib $(TESTS) $(MAIN)
+	$(COMMAND) -Wall -Wextra -Werror -I tests.h -o $(FILE_TEST) main.o $(NAME) $(TESTS)
+
+lib:
+	make -C ../libft
+
+
 $(TESTS): $(OBJ_TEST)
 	ar rc $(TESTS) $(OBJ_TEST)
 	ranlib $(TESTS)
 
 .c.o:
-	$(COMMAND) $(FLAGS) -c $< -o $@
+	$(COMMAND) $(FLAGS) -I tests.h -c $< -o $@
 
 clean:
 	/bin/rm -f $(OBJ_TEST)
@@ -39,4 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re test
+.PHONY: all lib .c.o clean fclean re
