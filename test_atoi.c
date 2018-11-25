@@ -22,12 +22,17 @@ static int	atoi_test(char *s1)
 
 void		ft_atoi_test(void)
 {
-	if (atoi_test("12345") == 0 &&
+	if (atoi_test("+548") == 0 &&
+		atoi_test("12345") == 0 &&
 		atoi_test("0") == 0 &&
-		atoi_test("2147483647") == 0 &&
-		atoi_test("-2147483648") == 0 &&
+		atoi_test("2147483646") == 0 &&
+		atoi_test("-2147483647") == 0 &&
 		atoi_test("9999999999999999999") == 0 &&
-		atoi_test("-9999999999999999999") == 0)
+		atoi_test("-9999999999999999999") == 0 &&
+		atoi_test("999999999999999999") == 0 &&
+		atoi_test("-999999999999999999") == 0 &&
+		atoi_test("99999999999999999") == 0 &&
+		atoi_test("-99999999999999999") == 0)
 		ft_puts("Norm:	ft_atoi");
 	else
 		ft_puts("Error:	ft_atoi");

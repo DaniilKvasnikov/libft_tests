@@ -32,10 +32,28 @@ static int	strlcat_test(char *s1, char *s2, int n)
 	return (result != 0);
 }
 
+static int	strlcat_test_dop(char *s2, int n)
+{
+	char	*origin;
+	char	*test;
+	int		result;
+	
+	origin = (char *)malloc(sizeof(char	*) * 15);
+	memset(origin, 0, 15);
+	memset(origin, 'r', 6);
+	test = (char *)malloc(sizeof(char	*) * 15);
+	memset(test, 0, 15);
+	memset(test, 'r', 6);
+
+	result = ft_equal_i(strlcat(origin, s2, n), ft_strlcat(test, s2, n)) && ft_equal_a(origin, test);
+	return (result != 0);
+}
+
 void		ft_strlcat_test(void)
 {
 	if (strlcat_test("123", "123", 1) == 0 &&
-		strlcat_test("123", "", 1) == 0)
+		strlcat_test("123", "", 1) == 0 &&
+		strlcat_test_dop("123", 4) == 0)
 		ft_puts("Norm:	ft_strlcat");
 	else
 		ft_puts("Error:	ft_strlcat");
