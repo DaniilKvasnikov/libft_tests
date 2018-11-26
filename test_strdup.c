@@ -30,7 +30,7 @@ void		ft_strdup_test(void)
 //		strdup_test(NULL) == 0 && //Not work
 		strdup_test("") == 0 &&
 		strdup_test("asd\t\0 asd") == 0)
-		ft_puts("Norm:	ft_strdup");
+		ft_putendl("Norm:	ft_strdup");
 	else
-		ft_puts("Error:	ft_strdup");
+		ft_putendl("Error:	ft_strdup");
 }

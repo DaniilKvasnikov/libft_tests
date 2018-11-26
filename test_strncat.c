@@ -41,7 +41,7 @@ void		ft_strncat_test(void)
 		strncat_test("123", "123", 3) == 0 &&
 //		strncat_test(NULL, NULL, 0) == 0 && //Not work
 		strncat_test("", "", 3) == 0)
-		ft_puts("Norm:	ft_strncat");
+		ft_putendl("Norm:	ft_strncat");
 	else
-		ft_puts("Error:	ft_strncat");
+		ft_putendl("Error:	ft_strncat");
 }

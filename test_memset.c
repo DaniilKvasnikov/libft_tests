@@ -49,7 +49,7 @@ void		ft_memset_test(void)
 		memset_test("f123456789", '$', 0, 0) == 0 &&
 		memset_test("", '$', 0, 0) == 0 &&
 		memset_test("g23", 010045, 1, 0) == 0)
-		ft_puts("Norm:	ft_memset");
+		ft_putendl("Norm:	ft_memset");
 	else
-		ft_puts("Error:	ft_memset");
+		ft_putendl("Error:	ft_memset");
 }

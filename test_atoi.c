@@ -33,7 +33,7 @@ void		ft_atoi_test(void)
 		atoi_test("-999999999999999999") == 0 &&
 		atoi_test("99999999999999999") == 0 &&
 		atoi_test("-99999999999999999") == 0)
-		ft_puts("Norm:	ft_atoi");
+		ft_putendl("Norm:	ft_atoi");
 	else
-		ft_puts("Error:	ft_atoi");
+		ft_putendl("Error:	ft_atoi");
 }

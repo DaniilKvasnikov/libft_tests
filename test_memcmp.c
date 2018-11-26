@@ -37,7 +37,7 @@ void		ft_memcmp_test(void)
 		memcmp_test(NULL, NULL, 0) == 0 &&
 		memcmp_test("123", NULL, 0) == 0 &&
 		memcmp_test(NULL, "123", 0) == 0)
-		ft_puts("Norm:	ft_memcpy");
+		ft_putendl("Norm:	ft_memcpy");
 	else
-		ft_puts("Error:	ft_memcpy");
+		ft_putendl("Error:	ft_memcpy");
 }

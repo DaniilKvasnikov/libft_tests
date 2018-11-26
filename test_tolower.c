@@ -25,7 +25,7 @@ void		ft_tolower_test(void)
 	if (tolower_test('1') == 0 &&
 		tolower_test('A') == 0 &&
 		tolower_test('a') == 0)
-		ft_puts("Norm:	ft_tolower");
+		ft_putendl("Norm:	ft_tolower");
 	else
-		ft_puts("Error:	ft_tolower");
+		ft_putendl("Error:	ft_tolower");
 }

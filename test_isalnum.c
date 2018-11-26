@@ -25,7 +25,7 @@ void		ft_isalnum_test(void)
 	if (isalnum_test('0') == 0 &&
 		isalnum_test('a') == 0 &&
 		isalnum_test(' ') == 0)
-		ft_puts("Norm:	ft_isalnum");
+		ft_putendl("Norm:	ft_isalnum");
 	else
-		ft_puts("Error:	ft_isalnum");
+		ft_putendl("Error:	ft_isalnum");
 }

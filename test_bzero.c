@@ -49,7 +49,7 @@ void		ft_bzero_test(void)
 		bzero_test("f123456789", 0, 1) == 0 &&
 		bzero_test("", 0, 0) == 0 &&
 		bzero_test("g23", 1, 1) == 0)
-		ft_puts("Norm:	ft_bzero");
+		ft_putendl("Norm:	ft_bzero");
 	else
-		ft_puts("Error:	ft_bzero");
+		ft_putendl("Error:	ft_bzero");
 }

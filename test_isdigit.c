@@ -25,7 +25,7 @@ void		ft_isdigit_test(void)
 	if (isdigit_test('0') == 0 &&
 		isdigit_test('a') == 0 &&
 		isdigit_test(' ') == 0)
-		ft_puts("Norm:	ft_isdigit");
+		ft_putendl("Norm:	ft_isdigit");
 	else
-		ft_puts("Error:	ft_isdigit");
+		ft_putendl("Error:	ft_isdigit");
 }

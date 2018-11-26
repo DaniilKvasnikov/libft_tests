@@ -26,7 +26,7 @@ void		ft_isprint_test(void)
 		isprint_test('a') == 0 &&
 		isprint_test(' ') == 0 &&
 		isprint_test('s') == 0)
-		ft_puts("Norm:	ft_isprint");
+		ft_putendl("Norm:	ft_isprint");
 	else
-		ft_puts("Error:	ft_isprint");
+		ft_putendl("Error:	ft_isprint");
 }

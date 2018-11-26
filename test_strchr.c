@@ -28,7 +28,7 @@ void		ft_strchr_test(void)
 {
 	if (strchr_test("123", '2') == 0 &&
 		strchr_test("123", '4') == 0)
-		ft_puts("Norm:	ft_strchr");
+		ft_putendl("Norm:	ft_strchr");
 	else
-		ft_puts("Error:	ft_strchr");
+		ft_putendl("Error:	ft_strchr");
 }

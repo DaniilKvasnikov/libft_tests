@@ -54,7 +54,7 @@ void		ft_strlcat_test(void)
 	if (strlcat_test("123", "123", 1) == 0 &&
 		strlcat_test("123", "", 1) == 0 &&
 		strlcat_test_dop("123", 4) == 0)
-		ft_puts("Norm:	ft_strlcat");
+		ft_putendl("Norm:	ft_strlcat");
 	else
-		ft_puts("Error:	ft_strlcat");
+		ft_putendl("Error:	ft_strlcat");
 }

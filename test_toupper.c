@@ -25,7 +25,7 @@ void		ft_toupper_test(void)
 	if (toupper_test('1') == 0 &&
 		toupper_test('A') == 0 &&
 		toupper_test('a') == 0)
-		ft_puts("Norm:	ft_toupper");
+		ft_putendl("Norm:	ft_toupper");
 	else
-		ft_puts("Error:	ft_toupper");
+		ft_putendl("Error:	ft_toupper");
 }

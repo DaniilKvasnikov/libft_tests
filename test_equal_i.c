@@ -19,13 +19,13 @@ int	ft_equal_i(int p1, int p2)
 	result = (p1 != p2);
 	if (PRINT_LOG == 1)
 	{
-		(result == 0) ? ft_puts("Norm:") : ft_puts("Error:");
+		(result == 0) ? ft_putendl("Norm:") : ft_putendl("Error:");
 		ft_putstr("	origin: ");
 		ft_putnbr(p1);
-		ft_puts("");
+		ft_putendl("");
 		ft_putstr("	  test: ");
 		ft_putnbr(p2);
-		ft_puts("");
+		ft_putendl("");
 	}
 	return (result != 0);
 }

@@ -46,7 +46,7 @@ void		ft_memccpy_test(void)
 		memccpy_test("123", "456", '5', 2, 0) == 0 &&
 		memccpy_test("123", "456", '5', 1, 0) == 0 &&
 		memccpy_test(NULL, NULL, '5', 0, 0) == 0)
-		ft_puts("Norm:	ft_memccpy");
+		ft_putendl("Norm:	ft_memccpy");
 	else
-		ft_puts("Error:	ft_memccpy");
+		ft_putendl("Error:	ft_memccpy");
 }

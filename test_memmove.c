@@ -52,7 +52,7 @@ void		ft_memmove_test(void)
 		memmove_test("123", NULL, 0, 0) == 0 &&
 //		memmove_test(NULL, NULL, -1, 0) == 0 &&
 		memmove_test(NULL, "456", 0, 0) == 0)
-		ft_puts("Norm:	ft_memmove");
+		ft_putendl("Norm:	ft_memmove");
 	else
-		ft_puts("Error:	ft_memmove");
+		ft_putendl("Error:	ft_memmove");
 }

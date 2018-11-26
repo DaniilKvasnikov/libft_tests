@@ -49,7 +49,7 @@ void		ft_memcpy_test(void)
 		memcpy_test("123", "456", 3, 1) == 0 &&
 		memcpy_test("123", "456", 3, 3) == 0 &&
 		memcpy_test(NULL, NULL, 1, 1) == 0)
-		ft_puts("Norm:	ft_memcpy");
+		ft_putendl("Norm:	ft_memcpy");
 	else
-		ft_puts("Error:	ft_memcpy");
+		ft_putendl("Error:	ft_memcpy");
 }

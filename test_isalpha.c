@@ -25,7 +25,7 @@ void		ft_isalpha_test(void)
 	if (isalpha_test('0') == 0 &&
 		isalpha_test('a') == 0 &&
 		isalpha_test(' ') == 0)
-		ft_puts("Norm:	ft_isalpha");
+		ft_putendl("Norm:	ft_isalpha");
 	else
-		ft_puts("Error:	ft_isalpha");
+		ft_putendl("Error:	ft_isalpha");
 }

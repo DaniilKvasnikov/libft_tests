@@ -29,7 +29,7 @@ void		ft_strlen_test(void)
 	if (strlen_test("123") == 0 &&
 		strlen_test("") == 0 &&
 		strlen_test("asd\t\0 asd") == 0)
-		ft_puts("Norm:	ft_strlen");
+		ft_putendl("Norm:	ft_strlen");
 	else
-		ft_puts("Error:	ft_strlen");
+		ft_putendl("Error:	ft_strlen");
 }

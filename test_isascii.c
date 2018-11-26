@@ -25,7 +25,7 @@ void		ft_isascii_test(void)
 	if (isascii_test('0') == 0 &&
 		isascii_test('a') == 0 &&
 		isascii_test(' ') == 0)
-		ft_puts("Norm:	ft_isascii");
+		ft_putendl("Norm:	ft_isascii");
 	else
-		ft_puts("Error:	ft_isascii");
+		ft_putendl("Error:	ft_isascii");
 }

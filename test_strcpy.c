@@ -47,7 +47,7 @@ void		ft_strcpy_test(void)
 		strcpy_test("123", "456", 1) == 0 &&
 		strcpy_test("123", "456", 1) == 0 &&
 		strcpy_test("123", "456", 3) == 0)
-		ft_puts("Norm:	ft_strcpy");
+		ft_putendl("Norm:	ft_strcpy");
 	else
-		ft_puts("Error:	ft_strcpy");
+		ft_putendl("Error:	ft_strcpy");
 }

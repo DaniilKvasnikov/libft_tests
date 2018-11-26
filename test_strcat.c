@@ -39,7 +39,7 @@ void		ft_strcat_test(void)
 	if (strcat_test("123", "123") == 0 &&
 //		strcat_test(NULL, NULL) == 0 && //Not work
 		strcat_test("", "") == 0)
-		ft_puts("Norm:	ft_strcat");
+		ft_putendl("Norm:	ft_strcat");
 	else
-		ft_puts("Error:	ft_strcat");
+		ft_putendl("Error:	ft_strcat");
 }
