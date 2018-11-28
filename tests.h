@@ -17,7 +17,7 @@
 # include <string.h>
 # include <ctype.h>
 
-# define PRINT_LOG 1
+# define PRINT_LOG 0
 
 int		ft_equal_a(char *s1, char *s2);
 int		ft_equal_i(int p1, int p2);
